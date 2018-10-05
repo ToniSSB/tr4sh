@@ -39,13 +39,13 @@ h1 {
 
 #tablewrap {
 	padding: 30px 0;
-	background-color: #433449;
+	background-color: #1A1A1A;
 	width: 100%;
 	display:block;
 }
 
 td {
-	border: solid 3px black;
+	border: solid 3px white;
 	margin: 0;
 	padding: 0;
 	height: 64px;
@@ -107,8 +107,8 @@ td:last-of-type {
 
 #settings:hover {
 	opacity: .5;
-	-webkit-transform: rotate(999000deg);
-	transform: rotate(999000deg);
+	-webkit-transform: rotate(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999deg);
+	transform: rotate(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999deg);
 }
 
 #moveButtons {
