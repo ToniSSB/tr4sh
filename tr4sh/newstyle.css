@@ -39,7 +39,7 @@ h1 {
 
 #tablewrap {
 	padding: 30px 0;
-	background-color: #302138;
+	background-color: #CE814E;
 	width: 100%;
 	display:block;
 }
@@ -61,7 +61,7 @@ table {
 	margin-right: auto;
 	border-spacing: 0;
 	border: solid 3px black;
-	background:#302138 url("img/logobg.png") no-repeat bottom right;
+	background:#CE814E url("img/halloween.png") no-repeat bottom right;
 }
 
 .labelHolder {
