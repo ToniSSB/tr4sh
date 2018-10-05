@@ -75,10 +75,11 @@
 				<p><button id="addRowUp">ad roe up</button> <button id="addRowBelow">ad roe doen</button></p>
 			</div>
 			<div id="gameChange">
-				<h1>is onle tr4sh</h1>
+				<h1>ries and shine gameers</h1>
 				<span id="close"></span>
 				<div id="switchButtons">
 <button id="switchSmash4">trash</button>
+					<button id="switchHelp">helpy bois</button>
 
 </div>
 				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
@@ -110,6 +111,7 @@
 		
 		// character images
 		var singleChar = "<div class='character'></div>";
+		var gameHelp = ["help","bleg","breck","broster","jab","jim","keko","latios","mvw","sfr"];
 		var gameSmash4 = ["trash","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","drmario","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","darkpit","marth","marthcina","ike","robin","lucina","roy","corrin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","mewtwo","rob","ness","lucas","captainfalcon","villager","olimar","wiifittrainer","shulk","pacman","megaman","ryu","sonic","cloud","bayonetta","miibrawler1","miigunner1","miisword1","miibrawler","miigunner","miisword"];
 		var gameSSB4Renders = ["ssb4r","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","marthcina","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta","miibrawler1","miigunner1","miisword1","miibrawler","miigunner","miisword"];
 		var gamePoise = 
@@ -248,6 +250,7 @@
 				case "switchPoise": changeGame(gamePoise);break;
 				case "switchMP": changeGame(gameMP);break;
 				case "switchDDLC": changeGame(gameDDLC);break;
+				case "switchHelp": changeGame(gameHelp);break;
 				}
 		});
 			
@@ -345,6 +348,7 @@
 					case "Poise": changeGame(gamePoise);break;
 					case "MP": changeGame(gameMP);break;
 					case "DDLC": changeGame(gameDDLC);break;
+					case "help": changeGame(game);break;
 
 				}
 				loadCode(currentGameChars[0]+"==S|0==A|1==B|3==C|5==D|7==E|8==F|9");
@@ -466,6 +470,7 @@
 				case "Poise": changeGame(gamePoise);break;
 				case "MP": changeGame(gameMP);break;
 				case "DDLC": changeGame(gameDDLC);break;
+				case "help": changeGame(gameHelp);break;
 }
 			for (var i = 1; i < processedCode.length; i++) {
 				$("tbody").append(singleTier);
