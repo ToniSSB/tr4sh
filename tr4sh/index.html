@@ -440,7 +440,7 @@ function Bleg() {
     code = "trash";
     maxNumTiers = 8;
     minNumTiers = 6;
-    numCharacters = 59;
+    numCharacters = 56;
     numTiers = Math.floor(Math.random() * (maxNumTiers - minNumTiers + 1) ) + minNumTiers;
     tiers = ["==S", "==A", "==B", "==C", "==D", "==E", "==F", "==G"];
     characters = [];
@@ -455,7 +455,7 @@ function Bleg() {
         x = Math.floor(Math.random() * numTiers);
         y = Math.floor(Math.random() * numCharacters);
     console.log("adding character " + y +" to tier " + tiers[x]);
-        tiers[x] += "|" + characters[y];
+        tiers[x] += "|" + characters[y].toString();
         for (j = y; j < numCharacters - 1; j++) {
             tiers[j] = tiers[j + 1];
         }
@@ -465,7 +465,7 @@ function Bleg() {
     for (i = 0; i < numTiers; i++) {
         code += tiers[i];
     }
-    console.log("Loading code: \n" + code);
+    console.log("Loading code: " + code);
     loadCode(code);
 }
 		
