@@ -10,7 +10,8 @@
 <body>
 	<div id="controls">
 		<h1>teir liss - <span>open dah lok at dah gaem nam butn 3 strt</span></h1>
-		<div id="buttons">
+		<div id="buttons">		 
+			<button id="Bleg">random!!1!!1</button>
 			<button id="screenshot">shar</button>
 			<button id="hidebuttons">hid a da contrl</button>
 			<button id="game">lok at gaem naem</button>
@@ -280,6 +281,11 @@
 					$("#screenshotShow").css("top",alignPopup($("#screenshotShow")));
 				  }
 				});
+				
+
+			} else if (clicked == "Bleg") {
+        Bleg();
+	    
 			} else if(clicked == "hidebuttons") { // hide the buttons
 				if (screenshotMode) {
 					$("td:last-of-type").css("display","table-cell");
@@ -427,6 +433,39 @@
 			console.log(shareCode);
 			return shareCode;
 		}
+		
+		function Bleg() {
+    var code, maxNumTiers, minNumTiers, numTiers, tiers, characters, numCharacters, i, j, x, y;
+    // Initialize our variables
+    code = "trash==Stupid \n";
+    maxNumTiers = 6;
+    minNumTiers = 3;
+    numCharacters = 59;
+    numTiers = Math.floor(Math.random() * (maxNumTiers - minNumTiers + 1) ) + minNumTiers;
+    tiers = ["Top Tier", "P good", "Alright", "Sub Par", "P Bad", "Delet"];
+    characters = [];
+
+    // Establish the characters
+    for (i = 0; i < numCharacters; i++) {
+        characters[i] = i;
+    }
+    // Randomly generate the string
+    for (i = 0; i < numCharacters; i++) {
+        //x is the random tier being added to, y is the random character chosen
+        x = Math.floor(Math.random() * numTiers);
+        y = Math.floor(Math.random() * numCharacters);
+        tiers[x] += "|" + characters[y];
+        for (j = y; j < numCharacters - 1; j++) {
+            tiers[j] = tiers[j + 1];
+        }
+        numCharacters--;
+    }
+    // Assemble the code
+    for (i = 0; i < numTiers; i++) {
+        code += tiers[i];
+    }
+    loadCode(code);
+}
 		
 		function loadCode(code) {
 			var codeSplit = [], tempTier = [], processedCode = [];
