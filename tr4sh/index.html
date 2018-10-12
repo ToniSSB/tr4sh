@@ -441,8 +441,7 @@ function Bleg() {
     maxNumTiers = 8;
     minNumTiers = 6;
     numCharacters = 56;
-    numTiers = Math.floor(Math.random() * (maxNumTiers - minNumTiers + 1) ) + minNumTiers;
-    console.log("Number of tiers: " + numTiers);
+    numTiers = Math.floor(Math.random() * Math.floor(maxNumTiers - minNumTiers + 1) ) + minNumTiers;
     tiers = ["==S", "==A", "==B", "==C", "==D", "==E", "==F", "==G"];
     characters = [];
 
@@ -453,12 +452,12 @@ function Bleg() {
     // Randomly generate the string
     for (i = 0; i < numCharacters; i++) {
         //x is the random tier being added to, y is the random character chosen
-        x = Math.floor(Math.random() * numTiers);
-        y = Math.floor(Math.random() * numCharacters);
-    console.log("adding character " + y +" to tier " + tiers[x]);
+        x = Math.floor(Math.random() * Math.floor(numTiers));
+        y = Math.floor(Math.random() * Math.floor(numCharacters));
+    console.log("adding character " + characters[y] +" to tier " + tiers[x]);
         tiers[x] += "|" + characters[y].toString();
         for (j = y; j < numCharacters - 1; j++) {
-            tiers[j] = tiers[j + 1];
+            characters[j] = characters[j + 1];
         }
         numCharacters--;
     }
@@ -468,7 +467,7 @@ function Bleg() {
     }
     console.log("Loading code: " + code);
     loadCode(code);
-}
+} 
 		
 		function loadCode(code) {
 			var codeSplit = [], tempTier = [], processedCode = [];
