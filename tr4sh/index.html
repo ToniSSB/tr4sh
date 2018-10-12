@@ -442,7 +442,7 @@ function Bleg() {
     minNumTiers = 6;
     numCharacters = 59;
     numTiers = Math.floor(Math.random() * (maxNumTiers - minNumTiers + 1) ) + minNumTiers;
-    tiers = ["==S", "==A", "==B", "==C", "==D", "==E", "==F", "==G "];
+    tiers = ["==S", "==A", "==B", "==C", "==D", "==E", "==F", "==G"];
     characters = [];
 
     // Establish the characters
@@ -465,7 +465,7 @@ function Bleg() {
     for (i = 0; i < numTiers; i++) {
         code += tiers[i];
     }
-    console.log("Loading code: " + code);
+    console.log("Loading code: \n" + code);
     loadCode(code);
 }
 		
