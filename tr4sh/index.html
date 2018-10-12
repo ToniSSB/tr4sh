@@ -435,12 +435,12 @@
 		}
 		
 function Bleg() {
-    var code, maxNumTiers, minNumTiers, numTiers, tiers, characters, numCharacters, i, j, x, y;
+    var code, maxNumTiers, minNumTiers, numTiers, tiers, characters, numCharacters, numCharactersLeft, i, j, x, y;
     // Initialize our variables
     code = "trash";
     maxNumTiers = 8;
     minNumTiers = 6;
-    numCharacters = 56;
+    numCharacters = 59;
     numTiers = Math.floor(Math.random() * Math.floor(maxNumTiers - minNumTiers + 1) ) + minNumTiers;
     tiers = ["==S", "==A", "==B", "==C", "==D", "==E", "==F", "==G"];
     characters = [];
@@ -467,7 +467,7 @@ function Bleg() {
     }
     console.log("Loading code: " + code);
     loadCode(code);
-} 
+}
 		
 		function loadCode(code) {
 			var codeSplit = [], tempTier = [], processedCode = [];
