@@ -62,6 +62,7 @@ table {
 	border-spacing: 0;
 	border: solid 3px black;
 	background:#7CC5F9 url("img/logobg.png") no-repeat;
+	background:#7CC5F9 url("img/rosa.png") no-repeat bottom right;
 }
 
 .labelHolder {
